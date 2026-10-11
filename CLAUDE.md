@@ -6,9 +6,13 @@
 ユーザーが指定した日付（単独でも複数でも可）の空きだけを監視する。
 
 ## 状況
-- フェーズ: **ローカル実装・検証済み。LINE と GitHub のセットアップ待ち（ユーザー作業）**（2026-10-11）
-- 済: `watch.py`、テスト4件パス、実サイトへの dry-run 成功（10/25 は空き0、10/14 は54件を正しく検出）。
-- 未: LINE 実送信テスト、GitHub Actions 上での疎通（WAF）確認、git init / push。
+- フェーズ: **本番稼働中**（2026-10-11 開始）。リポジトリ: https://github.com/Yuya-Uchiyama88/tennis-alert （public）
+- 確認済み: GitHub Actions からサイトへ疎通OK（WAFに弾かれず）、LINE 実送信OK（10/14 を一時追加してテスト、その後削除）。
+- 未確認: schedule（定期実行）が実際に10分間隔で動くか・遅延の程度、コマ時刻の実サイトとの突き合わせ。
+- 運用メモ: Actions が state.json を自動コミットするので、ローカルから push する前に必ず `git pull --rebase`。
+  コミット作者はリポジトリローカル設定で `Yuya-Uchiyama88@users.noreply.github.com`（メール非公開のため）。
+  `gh` CLI なし。実行状況は公開APIで確認可: `curl https://api.github.com/repos/Yuya-Uchiyama88/tennis-alert/actions/runs`
+  checkout は v5（v4 は Node 20 非推奨の警告が出た）。
 - 直近で監視したい日: **2026-10-25（日）**（10/11時点で全コート×、空き0）
 
 ## ユーザー決定事項
