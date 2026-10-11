@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.6">
+<meta name="apple-mobile-web-app-capable" content=yes>
+<meta name="copyright" content="Copyright 2010-2017 ZiWAVE Co., Ltd.">
+<meta name="keywords" content="施設予約システム,公共施設予約システム,OSS,公共施設,オープンソース,オープンリーフ,OpenReaf">
+<meta name="description" content="OpenReaf（オープンリーフ）は、公共施設予約システム・ 施設予約システムのオープンソース（OSS）です。">
+<link rel="shortcut icon" href="image/icons/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="image/icons/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="57x57" href="image/icons/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="72x72" href="image/icons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="image/icons/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="image/icons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="image/icons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="image/icons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="image/icons/apple-touch-icon-152x152.png">
+<link rel="stylesheet" type="text/css" href="css/style.css" media="all">
+<script type="text/javascript" src="script/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="script/default.js"></script>
+<title>柏市公共施設予約システム</title>
+</head>
+
+<body>
+<header>
+<div id="header">
+	<h1><img src="image/logo.gif" alt="柏市公共施設予約システム"></h1>
+<!--/header-->
+</div>
+</header>
+
+<main>
+<div id="conts">
+	<h2 class="title">申込状況表示<br>
+		<strong class="message">
+			ご利用になる施設を選択してください。
+					</strong>
+	</h2>
+	<div id="conts-body">
+
+
+<!--kensaku_koma.tpl-->
+<style>
+	.not_available{
+		font-size: 14px;
+		color:red;
+	}
+	a.not_available_link {
+		cursor: default;
+		color:#797979;
+	}
+
+
+</style>
+<div id="kensaku_result">
+
+<h3>令和 8年10月25日 (日)&nbsp;&nbsp;&nbsp;&nbsp;テニス</h3>
+<table style="margin:0 auto;">
+<tr>
+	<td style="width:100px;text-align:left;"><a href="index.php?op=kensaku_koma&UseDate=20261018" class="week-back">1週間前</a></td>
+	<td style="width:100px;text-align:left;"><a href="index.php?op=kensaku_koma&UseDate=20261024" class="day-back">1日前</a></td>
+	<td style="width:376px;">&nbsp;</td>
+	<td style="width:100px;text-align:right;"><a href="index.php?op=kensaku_koma&UseDate=20261026" class="day-next">1日後</a></td>
+	<td style="width:100px;text-align:right;"><a href="index.php?op=kensaku_koma&UseDate=20261101" class="week-next">1週間後</a></td>
+</tr>
+</table>
+
+<div class="koma-area">
+<h3>柏ビレジ近隣センター</h3>
+			<table class="koma-table" style="margin:0 auto;">
+		<tr>
+			<th style="width:180px;">施設</th>
+							<th style="width:37px;">7</th>
+							<th style="width:37px;">8</th>
+							<th style="width:37px;">9</th>
+							<th style="width:37px;">10</th>
+							<th style="width:37px;">11</th>
+							<th style="width:37px;">12</th>
+							<th style="width:37px;">13</th>
+							<th style="width:37px;">14</th>
+							<th style="width:37px;">15</th>
+							<th style="width:37px;">16</th>
+							<th style="width:37px;">17</th>
+							<th style="width:37px;">18</th>
+							<th style="width:37px;">19</th>
+							<th style="width:37px;">20</th>
+							<th style="width:37px;">21</th>
+							<th style="width:37px;">22</th>
+			
+		</tr>
+	</table>
+					<table class="koma-table" style="margin:0 auto;">
+			<tr>
+				<td style="width:180px;" class="name">
+											<a href="index.php?op=daily&ShisetsuCode=002&ShitsujyoCode=005&CombiNo=3&UseDate=20261025"  >テニスコート&nbsp;A・B</a>
+									</td>
+									<td style="width:75px;background-color:#ffffff;">&nbsp;</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:227px;background-color:#ffffff;">&nbsp;</td>
+				
+			</tr>
+		</table>
+
+					<table class="koma-table" style="margin:0 auto;">
+			<tr>
+				<td style="width:180px;" class="name">
+											<a href="index.php?op=daily&ShisetsuCode=002&ShitsujyoCode=005&CombiNo=1&UseDate=20261025"  >テニスコート&nbsp;A</a>
+									</td>
+									<td style="width:75px;background-color:#ffffff;">&nbsp;</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:227px;background-color:#ffffff;">&nbsp;</td>
+				
+			</tr>
+		</table>
+
+					<table class="koma-table" style="margin:0 auto;">
+			<tr>
+				<td style="width:180px;" class="name">
+											<a href="index.php?op=daily&ShisetsuCode=002&ShitsujyoCode=005&CombiNo=2&UseDate=20261025"  >テニスコート&nbsp;B</a>
+									</td>
+									<td style="width:75px;background-color:#ffffff;">&nbsp;</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:227px;background-color:#ffffff;">&nbsp;</td>
+				
+			</tr>
+		</table>
+
+	
+
+
+</div>
+<div class="koma-area">
+<h3>大津ヶ丘中央公園運動場</h3>
+			<table class="koma-table" style="margin:0 auto;">
+		<tr>
+			<th style="width:180px;">施設</th>
+							<th style="width:37px;">7</th>
+							<th style="width:37px;">8</th>
+							<th style="width:37px;">9</th>
+							<th style="width:37px;">10</th>
+							<th style="width:37px;">11</th>
+							<th style="width:37px;">12</th>
+							<th style="width:37px;">13</th>
+							<th style="width:37px;">14</th>
+							<th style="width:37px;">15</th>
+							<th style="width:37px;">16</th>
+							<th style="width:37px;">17</th>
+							<th style="width:37px;">18</th>
+							<th style="width:37px;">19</th>
+							<th style="width:37px;">20</th>
+							<th style="width:37px;">21</th>
+							<th style="width:37px;">22</th>
+			
+		</tr>
+	</table>
+					<table class="koma-table" style="margin:0 auto;">
+			<tr>
+				<td style="width:180px;" class="name">
+											<a href="index.php?op=daily&ShisetsuCode=042&ShitsujyoCode=002&CombiNo=0&UseDate=20261025"  >庭球場人工芝１面</a>
+									</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffffff;">&nbsp;</td>
+				
+			</tr>
+		</table>
+
+					<table class="koma-table" style="margin:0 auto;">
+			<tr>
+				<td style="width:180px;" class="name">
+											<a href="index.php?op=daily&ShisetsuCode=042&ShitsujyoCode=003&CombiNo=0&UseDate=20261025"  >庭球場人工芝２面</a>
+									</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffffff;">&nbsp;</td>
+				
+			</tr>
+		</table>
+
+					<table class="koma-table" style="margin:0 auto;">
+			<tr>
+				<td style="width:180px;" class="name">
+											<a href="index.php?op=daily&ShisetsuCode=042&ShitsujyoCode=004&CombiNo=0&UseDate=20261025"  >庭球場人工芝３面</a>
+									</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffffff;">&nbsp;</td>
+				
+			</tr>
+		</table>
+
+	
+
+
+</div>
+<div class="koma-area">
+<h3>柏の葉庭球場</h3>
+			<table class="koma-table" style="margin:0 auto;">
+		<tr>
+			<th style="width:180px;">施設</th>
+							<th style="width:37px;">7</th>
+							<th style="width:37px;">8</th>
+							<th style="width:37px;">9</th>
+							<th style="width:37px;">10</th>
+							<th style="width:37px;">11</th>
+							<th style="width:37px;">12</th>
+							<th style="width:37px;">13</th>
+							<th style="width:37px;">14</th>
+							<th style="width:37px;">15</th>
+							<th style="width:37px;">16</th>
+							<th style="width:37px;">17</th>
+							<th style="width:37px;">18</th>
+							<th style="width:37px;">19</th>
+							<th style="width:37px;">20</th>
+							<th style="width:37px;">21</th>
+							<th style="width:37px;">22</th>
+			
+		</tr>
+	</table>
+					<table class="koma-table" style="margin:0 auto;">
+			<tr>
+				<td style="width:180px;" class="name">
+											<a href="index.php?op=daily&ShisetsuCode=032&ShitsujyoCode=001&CombiNo=0&UseDate=20261025"  >庭球場人工芝１面</a>
+									</td>
+									<td style="width:75px;background-color:#ffffff;">&nbsp;</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:227px;background-color:#ffffff;">&nbsp;</td>
+				
+			</tr>
+		</table>
+
+					<table class="koma-table" style="margin:0 auto;">
+			<tr>
+				<td style="width:180px;" class="name">
+											<a href="index.php?op=daily&ShisetsuCode=032&ShitsujyoCode=002&CombiNo=0&UseDate=20261025"  >庭球場人工芝２面</a>
+									</td>
+									<td style="width:75px;background-color:#ffffff;">&nbsp;</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:227px;background-color:#ffffff;">&nbsp;</td>
+				
+			</tr>
+		</table>
+
+					<table class="koma-table" style="margin:0 auto;">
+			<tr>
+				<td style="width:180px;" class="name">
+											<a href="index.php?op=daily&ShisetsuCode=032&ShitsujyoCode=003&CombiNo=0&UseDate=20261025"  >庭球場人工芝３面</a>
+									</td>
+									<td style="width:75px;background-color:#ffffff;">&nbsp;</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:227px;background-color:#ffffff;">&nbsp;</td>
+				
+			</tr>
+		</table>
+
+					<table class="koma-table" style="margin:0 auto;">
+			<tr>
+				<td style="width:180px;" class="name">
+											<a href="index.php?op=daily&ShisetsuCode=032&ShitsujyoCode=004&CombiNo=0&UseDate=20261025"  >庭球場人工芝４面</a>
+									</td>
+									<td style="width:75px;background-color:#ffffff;">&nbsp;</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:227px;background-color:#ffffff;">&nbsp;</td>
+				
+			</tr>
+		</table>
+
+					<table class="koma-table" style="margin:0 auto;">
+			<tr>
+				<td style="width:180px;" class="name">
+											<a href="index.php?op=daily&ShisetsuCode=032&ShitsujyoCode=005&CombiNo=0&UseDate=20261025"  >庭球場人工芝５面</a>
+									</td>
+									<td style="width:75px;background-color:#ffffff;">&nbsp;</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:227px;background-color:#ffffff;">&nbsp;</td>
+				
+			</tr>
+		</table>
+
+					<table class="koma-table" style="margin:0 auto;">
+			<tr>
+				<td style="width:180px;" class="name">
+											<a href="index.php?op=daily&ShisetsuCode=032&ShitsujyoCode=006&CombiNo=0&UseDate=20261025"  >庭球場人工芝６面</a>
+									</td>
+									<td style="width:75px;background-color:#ffffff;">&nbsp;</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:227px;background-color:#ffffff;">&nbsp;</td>
+				
+			</tr>
+		</table>
+
+					<table class="koma-table" style="margin:0 auto;">
+			<tr>
+				<td style="width:180px;" class="name">
+											<a href="index.php?op=daily&ShisetsuCode=032&ShitsujyoCode=007&CombiNo=0&UseDate=20261025"  >庭球場人工芝７面</a>
+									</td>
+									<td style="width:75px;background-color:#ffffff;">&nbsp;</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:227px;background-color:#ffffff;">&nbsp;</td>
+				
+			</tr>
+		</table>
+
+					<table class="koma-table" style="margin:0 auto;">
+			<tr>
+				<td style="width:180px;" class="name">
+											<a href="index.php?op=daily&ShisetsuCode=032&ShitsujyoCode=008&CombiNo=0&UseDate=20261025"  >庭球場人工芝８面</a>
+									</td>
+									<td style="width:75px;background-color:#ffffff;">&nbsp;</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:227px;background-color:#ffffff;">&nbsp;</td>
+				
+			</tr>
+		</table>
+
+	
+
+
+</div>
+<div class="koma-area">
+<h3>逆井運動場</h3>
+			<table class="koma-table" style="margin:0 auto;">
+		<tr>
+			<th style="width:180px;">施設</th>
+							<th style="width:37px;">7</th>
+							<th style="width:37px;">8</th>
+							<th style="width:37px;">9</th>
+							<th style="width:37px;">10</th>
+							<th style="width:37px;">11</th>
+							<th style="width:37px;">12</th>
+							<th style="width:37px;">13</th>
+							<th style="width:37px;">14</th>
+							<th style="width:37px;">15</th>
+							<th style="width:37px;">16</th>
+							<th style="width:37px;">17</th>
+							<th style="width:37px;">18</th>
+							<th style="width:37px;">19</th>
+							<th style="width:37px;">20</th>
+							<th style="width:37px;">21</th>
+							<th style="width:37px;">22</th>
+			
+		</tr>
+	</table>
+					<table class="koma-table" style="margin:0 auto;">
+			<tr>
+				<td style="width:180px;" class="name">
+											<a href="index.php?op=daily&ShisetsuCode=031&ShitsujyoCode=001&CombiNo=0&UseDate=20261025"  >庭球場人工芝１面</a>
+									</td>
+									<td style="width:75px;background-color:#ffffff;">&nbsp;</td>
+									<td style="width:75px;background-color:#90ee90;">保守</td>
+									<td style="width:75px;background-color:#90ee90;">保守</td>
+									<td style="width:75px;background-color:#90ee90;">保守</td>
+									<td style="width:75px;background-color:#90ee90;">保守</td>
+									<td style="width:227px;background-color:#ffffff;">&nbsp;</td>
+				
+			</tr>
+		</table>
+
+					<table class="koma-table" style="margin:0 auto;">
+			<tr>
+				<td style="width:180px;" class="name">
+											<a href="index.php?op=daily&ShisetsuCode=031&ShitsujyoCode=002&CombiNo=0&UseDate=20261025"  >庭球場人工芝２面</a>
+									</td>
+									<td style="width:75px;background-color:#ffffff;">&nbsp;</td>
+									<td style="width:75px;background-color:#90ee90;">保守</td>
+									<td style="width:75px;background-color:#90ee90;">保守</td>
+									<td style="width:75px;background-color:#90ee90;">保守</td>
+									<td style="width:75px;background-color:#90ee90;">保守</td>
+									<td style="width:227px;background-color:#ffffff;">&nbsp;</td>
+				
+			</tr>
+		</table>
+
+					<table class="koma-table" style="margin:0 auto;">
+			<tr>
+				<td style="width:180px;" class="name">
+											<a href="index.php?op=daily&ShisetsuCode=031&ShitsujyoCode=003&CombiNo=0&UseDate=20261025"  >庭球場人工芝３面</a>
+									</td>
+									<td style="width:75px;background-color:#ffffff;">&nbsp;</td>
+									<td style="width:75px;background-color:#90ee90;">保守</td>
+									<td style="width:75px;background-color:#90ee90;">保守</td>
+									<td style="width:75px;background-color:#90ee90;">保守</td>
+									<td style="width:75px;background-color:#90ee90;">保守</td>
+									<td style="width:227px;background-color:#ffffff;">&nbsp;</td>
+				
+			</tr>
+		</table>
+
+					<table class="koma-table" style="margin:0 auto;">
+			<tr>
+				<td style="width:180px;" class="name">
+											<a href="index.php?op=daily&ShisetsuCode=031&ShitsujyoCode=004&CombiNo=0&UseDate=20261025"  >庭球場人工芝４面</a>
+									</td>
+									<td style="width:75px;background-color:#ffffff;">&nbsp;</td>
+									<td style="width:75px;background-color:#90ee90;">保守</td>
+									<td style="width:75px;background-color:#90ee90;">保守</td>
+									<td style="width:75px;background-color:#90ee90;">保守</td>
+									<td style="width:75px;background-color:#90ee90;">保守</td>
+									<td style="width:227px;background-color:#ffffff;">&nbsp;</td>
+				
+			</tr>
+		</table>
+
+					<table class="koma-table" style="margin:0 auto;">
+			<tr>
+				<td style="width:180px;" class="name">
+											<a href="index.php?op=daily&ShisetsuCode=031&ShitsujyoCode=005&CombiNo=0&UseDate=20261025"  >庭球場人工芝５面</a>
+									</td>
+									<td style="width:75px;background-color:#ffffff;">&nbsp;</td>
+									<td style="width:75px;background-color:#90ee90;">保守</td>
+									<td style="width:75px;background-color:#90ee90;">保守</td>
+									<td style="width:75px;background-color:#90ee90;">保守</td>
+									<td style="width:75px;background-color:#90ee90;">保守</td>
+									<td style="width:227px;background-color:#ffffff;">&nbsp;</td>
+				
+			</tr>
+		</table>
+
+					<table class="koma-table" style="margin:0 auto;">
+			<tr>
+				<td style="width:180px;" class="name">
+											<a href="index.php?op=daily&ShisetsuCode=031&ShitsujyoCode=006&CombiNo=0&UseDate=20261025"  >庭球場人工芝６面</a>
+									</td>
+									<td style="width:75px;background-color:#ffffff;">&nbsp;</td>
+									<td style="width:75px;background-color:#90ee90;">保守</td>
+									<td style="width:75px;background-color:#90ee90;">保守</td>
+									<td style="width:75px;background-color:#90ee90;">保守</td>
+									<td style="width:75px;background-color:#90ee90;">保守</td>
+									<td style="width:227px;background-color:#ffffff;">&nbsp;</td>
+				
+			</tr>
+		</table>
+
+					<table class="koma-table" style="margin:0 auto;">
+			<tr>
+				<td style="width:180px;" class="name">
+											<a href="index.php?op=daily&ShisetsuCode=031&ShitsujyoCode=007&CombiNo=0&UseDate=20261025"  >庭球場人工芝７面</a>
+									</td>
+									<td style="width:75px;background-color:#ffffff;">&nbsp;</td>
+									<td style="width:75px;background-color:#90ee90;">保守</td>
+									<td style="width:75px;background-color:#90ee90;">保守</td>
+									<td style="width:75px;background-color:#90ee90;">保守</td>
+									<td style="width:75px;background-color:#90ee90;">保守</td>
+									<td style="width:227px;background-color:#ffffff;">&nbsp;</td>
+				
+			</tr>
+		</table>
+
+					<table class="koma-table" style="margin:0 auto;">
+			<tr>
+				<td style="width:180px;" class="name">
+											<a href="index.php?op=daily&ShisetsuCode=031&ShitsujyoCode=008&CombiNo=0&UseDate=20261025"  >庭球場人工芝８面</a>
+									</td>
+									<td style="width:75px;background-color:#ffffff;">&nbsp;</td>
+									<td style="width:75px;background-color:#90ee90;">保守</td>
+									<td style="width:75px;background-color:#90ee90;">保守</td>
+									<td style="width:75px;background-color:#90ee90;">保守</td>
+									<td style="width:75px;background-color:#90ee90;">保守</td>
+									<td style="width:227px;background-color:#ffffff;">&nbsp;</td>
+				
+			</tr>
+		</table>
+
+					<table class="koma-table" style="margin:0 auto;">
+			<tr>
+				<td style="width:180px;" class="name">
+											<a href="index.php?op=daily&ShisetsuCode=031&ShitsujyoCode=009&CombiNo=0&UseDate=20261025"  >庭球場クレー１面</a>
+									</td>
+									<td style="width:75px;background-color:#ffffff;">&nbsp;</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:227px;background-color:#ffffff;">&nbsp;</td>
+				
+			</tr>
+		</table>
+
+					<table class="koma-table" style="margin:0 auto;">
+			<tr>
+				<td style="width:180px;" class="name">
+											<a href="index.php?op=daily&ShisetsuCode=031&ShitsujyoCode=010&CombiNo=0&UseDate=20261025"  >庭球場クレー２面</a>
+									</td>
+									<td style="width:75px;background-color:#ffffff;">&nbsp;</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:227px;background-color:#ffffff;">&nbsp;</td>
+				
+			</tr>
+		</table>
+
+	
+
+
+</div>
+<div class="koma-area">
+<h3>しいの木台公園庭球場</h3>
+			<table class="koma-table" style="margin:0 auto;">
+		<tr>
+			<th style="width:180px;">施設</th>
+							<th style="width:37px;">7</th>
+							<th style="width:37px;">8</th>
+							<th style="width:37px;">9</th>
+							<th style="width:37px;">10</th>
+							<th style="width:37px;">11</th>
+							<th style="width:37px;">12</th>
+							<th style="width:37px;">13</th>
+							<th style="width:37px;">14</th>
+							<th style="width:37px;">15</th>
+							<th style="width:37px;">16</th>
+							<th style="width:37px;">17</th>
+							<th style="width:37px;">18</th>
+							<th style="width:37px;">19</th>
+							<th style="width:37px;">20</th>
+							<th style="width:37px;">21</th>
+							<th style="width:37px;">22</th>
+			
+		</tr>
+	</table>
+					<table class="koma-table" style="margin:0 auto;">
+			<tr>
+				<td style="width:180px;" class="name">
+											<a href="index.php?op=daily&ShisetsuCode=044&ShitsujyoCode=001&CombiNo=0&UseDate=20261025"  >庭球場人工芝１面</a>
+									</td>
+									<td style="width:75px;background-color:#ffffff;">&nbsp;</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:227px;background-color:#ffffff;">&nbsp;</td>
+				
+			</tr>
+		</table>
+
+					<table class="koma-table" style="margin:0 auto;">
+			<tr>
+				<td style="width:180px;" class="name">
+											<a href="index.php?op=daily&ShisetsuCode=044&ShitsujyoCode=002&CombiNo=0&UseDate=20261025"  >庭球場人工芝２面</a>
+									</td>
+									<td style="width:75px;background-color:#ffffff;">&nbsp;</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:227px;background-color:#ffffff;">&nbsp;</td>
+				
+			</tr>
+		</table>
+
+	
+
+
+</div>
+<div class="koma-area">
+<h3>新十余二第二公園庭球場</h3>
+			<table class="koma-table" style="margin:0 auto;">
+		<tr>
+			<th style="width:180px;">施設</th>
+							<th style="width:37px;">7</th>
+							<th style="width:37px;">8</th>
+							<th style="width:37px;">9</th>
+							<th style="width:37px;">10</th>
+							<th style="width:37px;">11</th>
+							<th style="width:37px;">12</th>
+							<th style="width:37px;">13</th>
+							<th style="width:37px;">14</th>
+							<th style="width:37px;">15</th>
+							<th style="width:37px;">16</th>
+							<th style="width:37px;">17</th>
+							<th style="width:37px;">18</th>
+							<th style="width:37px;">19</th>
+							<th style="width:37px;">20</th>
+							<th style="width:37px;">21</th>
+							<th style="width:37px;">22</th>
+			
+		</tr>
+	</table>
+					<table class="koma-table" style="margin:0 auto;">
+			<tr>
+				<td style="width:180px;" class="name">
+											<a href="index.php?op=daily&ShisetsuCode=037&ShitsujyoCode=001&CombiNo=0&UseDate=20261025"  >庭球場クレー１面</a>
+									</td>
+									<td style="width:75px;background-color:#ffffff;">&nbsp;</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:227px;background-color:#ffffff;">&nbsp;</td>
+				
+			</tr>
+		</table>
+
+					<table class="koma-table" style="margin:0 auto;">
+			<tr>
+				<td style="width:180px;" class="name">
+											<a href="index.php?op=daily&ShisetsuCode=037&ShitsujyoCode=002&CombiNo=0&UseDate=20261025"  >庭球場クレー２面</a>
+									</td>
+									<td style="width:75px;background-color:#ffffff;">&nbsp;</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:227px;background-color:#ffffff;">&nbsp;</td>
+				
+			</tr>
+		</table>
+
+					<table class="koma-table" style="margin:0 auto;">
+			<tr>
+				<td style="width:180px;" class="name">
+											<a href="index.php?op=daily&ShisetsuCode=037&ShitsujyoCode=003&CombiNo=0&UseDate=20261025"  >庭球場クレー３面</a>
+									</td>
+									<td style="width:75px;background-color:#ffffff;">&nbsp;</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:227px;background-color:#ffffff;">&nbsp;</td>
+				
+			</tr>
+		</table>
+
+	
+
+
+</div>
+<div class="koma-area">
+<h3>塚崎運動場</h3>
+			<table class="koma-table" style="margin:0 auto;">
+		<tr>
+			<th style="width:180px;">施設</th>
+							<th style="width:37px;">7</th>
+							<th style="width:37px;">8</th>
+							<th style="width:37px;">9</th>
+							<th style="width:37px;">10</th>
+							<th style="width:37px;">11</th>
+							<th style="width:37px;">12</th>
+							<th style="width:37px;">13</th>
+							<th style="width:37px;">14</th>
+							<th style="width:37px;">15</th>
+							<th style="width:37px;">16</th>
+							<th style="width:37px;">17</th>
+							<th style="width:37px;">18</th>
+							<th style="width:37px;">19</th>
+							<th style="width:37px;">20</th>
+							<th style="width:37px;">21</th>
+							<th style="width:37px;">22</th>
+			
+		</tr>
+	</table>
+					<table class="koma-table" style="margin:0 auto;">
+			<tr>
+				<td style="width:180px;" class="name">
+											<a href="index.php?op=daily&ShisetsuCode=041&ShitsujyoCode=002&CombiNo=0&UseDate=20261025"  >庭球場人工芝１面</a>
+									</td>
+									<td style="width:75px;background-color:#ffffff;">&nbsp;</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:227px;background-color:#ffffff;">&nbsp;</td>
+				
+			</tr>
+		</table>
+
+					<table class="koma-table" style="margin:0 auto;">
+			<tr>
+				<td style="width:180px;" class="name">
+											<a href="index.php?op=daily&ShisetsuCode=041&ShitsujyoCode=003&CombiNo=0&UseDate=20261025"  >庭球場人工芝２面</a>
+									</td>
+									<td style="width:75px;background-color:#ffffff;">&nbsp;</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:227px;background-color:#ffffff;">&nbsp;</td>
+				
+			</tr>
+		</table>
+
+	
+
+
+</div>
+<div class="koma-area">
+<h3>手賀の丘公園運動場</h3>
+			<table class="koma-table" style="margin:0 auto;">
+		<tr>
+			<th style="width:180px;">施設</th>
+							<th style="width:37px;">7</th>
+							<th style="width:37px;">8</th>
+							<th style="width:37px;">9</th>
+							<th style="width:37px;">10</th>
+							<th style="width:37px;">11</th>
+							<th style="width:37px;">12</th>
+							<th style="width:37px;">13</th>
+							<th style="width:37px;">14</th>
+							<th style="width:37px;">15</th>
+							<th style="width:37px;">16</th>
+							<th style="width:37px;">17</th>
+							<th style="width:37px;">18</th>
+							<th style="width:37px;">19</th>
+							<th style="width:37px;">20</th>
+							<th style="width:37px;">21</th>
+							<th style="width:37px;">22</th>
+			
+		</tr>
+	</table>
+					<table class="koma-table" style="margin:0 auto;">
+			<tr>
+				<td style="width:180px;" class="name">
+											<a href="index.php?op=daily&ShisetsuCode=043&ShitsujyoCode=002&CombiNo=0&UseDate=20261025"  >庭球場人工芝１面</a>
+									</td>
+									<td style="width:75px;background-color:#ffffff;">&nbsp;</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:227px;background-color:#ffffff;">&nbsp;</td>
+				
+			</tr>
+		</table>
+
+					<table class="koma-table" style="margin:0 auto;">
+			<tr>
+				<td style="width:180px;" class="name">
+											<a href="index.php?op=daily&ShisetsuCode=043&ShitsujyoCode=003&CombiNo=0&UseDate=20261025"  >庭球場人工芝２面</a>
+									</td>
+									<td style="width:75px;background-color:#ffffff;">&nbsp;</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:227px;background-color:#ffffff;">&nbsp;</td>
+				
+			</tr>
+		</table>
+
+					<table class="koma-table" style="margin:0 auto;">
+			<tr>
+				<td style="width:180px;" class="name">
+											<a href="index.php?op=daily&ShisetsuCode=043&ShitsujyoCode=004&CombiNo=0&UseDate=20261025"  >庭球場人工芝３面</a>
+									</td>
+									<td style="width:75px;background-color:#ffffff;">&nbsp;</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:227px;background-color:#ffffff;">&nbsp;</td>
+				
+			</tr>
+		</table>
+
+					<table class="koma-table" style="margin:0 auto;">
+			<tr>
+				<td style="width:180px;" class="name">
+											<a href="index.php?op=daily&ShisetsuCode=043&ShitsujyoCode=005&CombiNo=0&UseDate=20261025"  >庭球場人工芝４面</a>
+									</td>
+									<td style="width:75px;background-color:#ffffff;">&nbsp;</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:227px;background-color:#ffffff;">&nbsp;</td>
+				
+			</tr>
+		</table>
+
+					<table class="koma-table" style="margin:0 auto;">
+			<tr>
+				<td style="width:180px;" class="name">
+											<a href="index.php?op=daily&ShisetsuCode=043&ShitsujyoCode=006&CombiNo=0&UseDate=20261025"  >庭球場クレー１面</a>
+									</td>
+									<td style="width:75px;background-color:#ffffff;">&nbsp;</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:227px;background-color:#ffffff;">&nbsp;</td>
+				
+			</tr>
+		</table>
+
+					<table class="koma-table" style="margin:0 auto;">
+			<tr>
+				<td style="width:180px;" class="name">
+											<a href="index.php?op=daily&ShisetsuCode=043&ShitsujyoCode=007&CombiNo=0&UseDate=20261025"  >庭球場クレー２面</a>
+									</td>
+									<td style="width:75px;background-color:#ffffff;">&nbsp;</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:227px;background-color:#ffffff;">&nbsp;</td>
+				
+			</tr>
+		</table>
+
+	
+
+
+</div>
+<div class="koma-area">
+<h3>富勢運動場</h3>
+			<table class="koma-table" style="margin:0 auto;">
+		<tr>
+			<th style="width:180px;">施設</th>
+							<th style="width:37px;">7</th>
+							<th style="width:37px;">8</th>
+							<th style="width:37px;">9</th>
+							<th style="width:37px;">10</th>
+							<th style="width:37px;">11</th>
+							<th style="width:37px;">12</th>
+							<th style="width:37px;">13</th>
+							<th style="width:37px;">14</th>
+							<th style="width:37px;">15</th>
+							<th style="width:37px;">16</th>
+							<th style="width:37px;">17</th>
+							<th style="width:37px;">18</th>
+							<th style="width:37px;">19</th>
+							<th style="width:37px;">20</th>
+							<th style="width:37px;">21</th>
+							<th style="width:37px;">22</th>
+			
+		</tr>
+	</table>
+					<table class="koma-table" style="margin:0 auto;">
+			<tr>
+				<td style="width:180px;" class="name">
+											<a href="index.php?op=daily&ShisetsuCode=030&ShitsujyoCode=005&CombiNo=0&UseDate=20261025"  >庭球場人工芝１面</a>
+									</td>
+									<td style="width:75px;background-color:#ffffff;">&nbsp;</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:227px;background-color:#ffffff;">&nbsp;</td>
+				
+			</tr>
+		</table>
+
+					<table class="koma-table" style="margin:0 auto;">
+			<tr>
+				<td style="width:180px;" class="name">
+											<a href="index.php?op=daily&ShisetsuCode=030&ShitsujyoCode=006&CombiNo=0&UseDate=20261025"  >庭球場人工芝２面</a>
+									</td>
+									<td style="width:75px;background-color:#ffffff;">&nbsp;</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:227px;background-color:#ffffff;">&nbsp;</td>
+				
+			</tr>
+		</table>
+
+					<table class="koma-table" style="margin:0 auto;">
+			<tr>
+				<td style="width:180px;" class="name">
+											<a href="index.php?op=daily&ShisetsuCode=030&ShitsujyoCode=007&CombiNo=0&UseDate=20261025"  >庭球場人工芝３面</a>
+									</td>
+									<td style="width:75px;background-color:#ffffff;">&nbsp;</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:227px;background-color:#ffffff;">&nbsp;</td>
+				
+			</tr>
+		</table>
+
+					<table class="koma-table" style="margin:0 auto;">
+			<tr>
+				<td style="width:180px;" class="name">
+											<a href="index.php?op=daily&ShisetsuCode=030&ShitsujyoCode=008&CombiNo=0&UseDate=20261025"  >庭球場人工芝４面</a>
+									</td>
+									<td style="width:75px;background-color:#ffffff;">&nbsp;</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:227px;background-color:#ffffff;">&nbsp;</td>
+				
+			</tr>
+		</table>
+
+					<table class="koma-table" style="margin:0 auto;">
+			<tr>
+				<td style="width:180px;" class="name">
+											<a href="index.php?op=daily&ShisetsuCode=030&ShitsujyoCode=009&CombiNo=0&UseDate=20261025"  >庭球場人工芝５面</a>
+									</td>
+									<td style="width:75px;background-color:#ffffff;">&nbsp;</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:227px;background-color:#ffffff;">&nbsp;</td>
+				
+			</tr>
+		</table>
+
+					<table class="koma-table" style="margin:0 auto;">
+			<tr>
+				<td style="width:180px;" class="name">
+											<a href="index.php?op=daily&ShisetsuCode=030&ShitsujyoCode=010&CombiNo=0&UseDate=20261025"  >庭球場人工芝６面</a>
+									</td>
+									<td style="width:75px;background-color:#ffffff;">&nbsp;</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:227px;background-color:#ffffff;">&nbsp;</td>
+				
+			</tr>
+		</table>
+
+					<table class="koma-table" style="margin:0 auto;">
+			<tr>
+				<td style="width:180px;" class="name">
+											<a href="index.php?op=daily&ShisetsuCode=030&ShitsujyoCode=011&CombiNo=0&UseDate=20261025"  >庭球場人工芝７面</a>
+									</td>
+									<td style="width:75px;background-color:#ffffff;">&nbsp;</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:227px;background-color:#ffffff;">&nbsp;</td>
+				
+			</tr>
+		</table>
+
+					<table class="koma-table" style="margin:0 auto;">
+			<tr>
+				<td style="width:180px;" class="name">
+											<a href="index.php?op=daily&ShisetsuCode=030&ShitsujyoCode=012&CombiNo=0&UseDate=20261025"  >庭球場人工芝８面</a>
+									</td>
+									<td style="width:75px;background-color:#ffffff;">&nbsp;</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:227px;background-color:#ffffff;">&nbsp;</td>
+				
+			</tr>
+		</table>
+
+					<table class="koma-table" style="margin:0 auto;">
+			<tr>
+				<td style="width:180px;" class="name">
+											<a href="index.php?op=daily&ShisetsuCode=030&ShitsujyoCode=013&CombiNo=0&UseDate=20261025"  >庭球場人工芝９面</a>
+									</td>
+									<td style="width:75px;background-color:#ffffff;">&nbsp;</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:227px;background-color:#ffffff;">&nbsp;</td>
+				
+			</tr>
+		</table>
+
+					<table class="koma-table" style="margin:0 auto;">
+			<tr>
+				<td style="width:180px;" class="name">
+											<a href="index.php?op=daily&ShisetsuCode=030&ShitsujyoCode=014&CombiNo=0&UseDate=20261025"  >庭球場人工芝１０面</a>
+									</td>
+									<td style="width:75px;background-color:#ffffff;">&nbsp;</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:227px;background-color:#ffffff;">&nbsp;</td>
+				
+			</tr>
+		</table>
+
+					<table class="koma-table" style="margin:0 auto;">
+			<tr>
+				<td style="width:180px;" class="name">
+											<a href="index.php?op=daily&ShisetsuCode=030&ShitsujyoCode=015&CombiNo=0&UseDate=20261025"  >庭球場人工芝１１面</a>
+									</td>
+									<td style="width:75px;background-color:#ffffff;">&nbsp;</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:227px;background-color:#ffffff;">&nbsp;</td>
+				
+			</tr>
+		</table>
+
+					<table class="koma-table" style="margin:0 auto;">
+			<tr>
+				<td style="width:180px;" class="name">
+											<a href="index.php?op=daily&ShisetsuCode=030&ShitsujyoCode=016&CombiNo=0&UseDate=20261025"  >庭球場人工芝１２面</a>
+									</td>
+									<td style="width:75px;background-color:#ffffff;">&nbsp;</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:227px;background-color:#ffffff;">&nbsp;</td>
+				
+			</tr>
+		</table>
+
+	
+
+
+</div>
+<div class="koma-area">
+<h3>中の橋運動広場</h3>
+			<table class="koma-table" style="margin:0 auto;">
+		<tr>
+			<th style="width:180px;">施設</th>
+							<th style="width:37px;">7</th>
+							<th style="width:37px;">8</th>
+							<th style="width:37px;">9</th>
+							<th style="width:37px;">10</th>
+							<th style="width:37px;">11</th>
+							<th style="width:37px;">12</th>
+							<th style="width:37px;">13</th>
+							<th style="width:37px;">14</th>
+							<th style="width:37px;">15</th>
+							<th style="width:37px;">16</th>
+							<th style="width:37px;">17</th>
+							<th style="width:37px;">18</th>
+							<th style="width:37px;">19</th>
+							<th style="width:37px;">20</th>
+							<th style="width:37px;">21</th>
+							<th style="width:37px;">22</th>
+			
+		</tr>
+	</table>
+					<table class="koma-table" style="margin:0 auto;">
+			<tr>
+				<td style="width:180px;" class="name">
+											<a href="index.php?op=daily&ShisetsuCode=045&ShitsujyoCode=001&CombiNo=0&UseDate=20261025"  >庭球場ハード1面</a>
+									</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:227px;background-color:#ffffff;">&nbsp;</td>
+				
+			</tr>
+		</table>
+
+					<table class="koma-table" style="margin:0 auto;">
+			<tr>
+				<td style="width:180px;" class="name">
+											<a href="index.php?op=daily&ShisetsuCode=045&ShitsujyoCode=002&CombiNo=0&UseDate=20261025"  >庭球場ハード2面</a>
+									</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:227px;background-color:#ffffff;">&nbsp;</td>
+				
+			</tr>
+		</table>
+
+	
+
+
+</div>
+<div class="koma-area">
+<h3>松葉第二近隣公園庭球場</h3>
+			<table class="koma-table" style="margin:0 auto;">
+		<tr>
+			<th style="width:180px;">施設</th>
+							<th style="width:37px;">7</th>
+							<th style="width:37px;">8</th>
+							<th style="width:37px;">9</th>
+							<th style="width:37px;">10</th>
+							<th style="width:37px;">11</th>
+							<th style="width:37px;">12</th>
+							<th style="width:37px;">13</th>
+							<th style="width:37px;">14</th>
+							<th style="width:37px;">15</th>
+							<th style="width:37px;">16</th>
+							<th style="width:37px;">17</th>
+							<th style="width:37px;">18</th>
+							<th style="width:37px;">19</th>
+							<th style="width:37px;">20</th>
+							<th style="width:37px;">21</th>
+							<th style="width:37px;">22</th>
+			
+		</tr>
+	</table>
+					<table class="koma-table" style="margin:0 auto;">
+			<tr>
+				<td style="width:180px;" class="name">
+											<a href="index.php?op=daily&ShisetsuCode=035&ShitsujyoCode=001&CombiNo=0&UseDate=20261025"  >庭球場クレー１面</a>
+									</td>
+									<td style="width:75px;background-color:#ffffff;">&nbsp;</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:227px;background-color:#ffffff;">&nbsp;</td>
+				
+			</tr>
+		</table>
+
+					<table class="koma-table" style="margin:0 auto;">
+			<tr>
+				<td style="width:180px;" class="name">
+											<a href="index.php?op=daily&ShisetsuCode=035&ShitsujyoCode=002&CombiNo=0&UseDate=20261025"  >庭球場クレー２面</a>
+									</td>
+									<td style="width:75px;background-color:#ffffff;">&nbsp;</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:227px;background-color:#ffffff;">&nbsp;</td>
+				
+			</tr>
+		</table>
+
+					<table class="koma-table" style="margin:0 auto;">
+			<tr>
+				<td style="width:180px;" class="name">
+											<a href="index.php?op=daily&ShisetsuCode=035&ShitsujyoCode=003&CombiNo=0&UseDate=20261025"  >庭球場クレー３面</a>
+									</td>
+									<td style="width:75px;background-color:#ffffff;">&nbsp;</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:75px;background-color:#ffe0c1;">×</td>
+									<td style="width:227px;background-color:#ffffff;">&nbsp;</td>
+				
+			</tr>
+		</table>
+
+	
+
+
+</div>
+
+<table class="table-style tbl-color-3" style="margin:1em auto 0;">
+<tr>
+	<td style="background-color:#d1fafa;" colspan="3">○</td>
+	<td style="width:220px;text-align:left;">空き</td>
+</tr>
+<tr>
+	<td style="background-color:#ffe0c1;" colspan="3">×</td>
+	<td style="text-align:left;">予約済み</td>
+</tr>
+<tr>
+	<td style="width:50px;background-color:#ffff66;">抽選</td>
+	<td style="width:50px;background-color:#ffff66;">締切</td>
+	<td style="width:50px;background-color:#ffff66;">確認中</td>
+	<td style="text-align:left;">抽選申込・抽選締切・当選確認中</td>
+</tr>
+<tr>
+	<td style="background-color:#90ee90;">休館</td>
+	<td style="background-color:#90ee90;">保守</td>
+	<td style="background-color:#90ee90;">開放</td>
+	<td style="text-align:left;">休館・保守等で申込不可</td>
+</tr>
+<tr>
+	<td style="background-color:#ffffff;" colspan="3">&nbsp;</td>
+	<td style="text-align:left;">申込割当なし</td>
+</tr>
+</table>
+
+<!--/conts-body-->
+</div>
+<!--/conts-->
+</div>
+</main>
+
+<footer>
+<div id="footer">
+<div id="fnavi">
+		<a href="index.php?op=jyouken&UseYM=202610&UseDay=25&Mokuteki01=007&Type=01&ShisetsuCode=0" class="btn-04 back-icon"><img src="image/icon-back.gif" alt="">戻る</a>
+			<a href="index.php" class="btn-04 top-icon"><img src="image/icon-top.gif" alt=""><span>トップへ</span></a>
+	<!--/fnavi-->
+</div>
+<div id="note">
+<a href="https://www.city.kashiwa.lg.jp/shiminkatsudo/facilities/shisetsu/yoyaku/index.html" target="_blank">施設の申込みは，「空き状況確認」や「施設で確認」などからお申込を。<br>ホール系施設の連日申込は「マイページ」→「予約・抽選申込」→「一括予約」から行って下さい。</a><br>
+<a href="https://www.city.kashiwa.lg.jp/shiminkatsudo/facilities/shisetsu/yoyaku/index.html" target="_blank" style="display: inline-block; padding: 2px 16px; background-color: #fcc; border-radius: 8px;">当選予約は、期日までに当選確定処理をしないと無効化されます。</a>&nbsp;<br>操作方法は、各施設にお問い合わせください。
+
+<a href="http://openreaf.jp/" target="_blank"><img src="image/openreaf.gif" alt="オープンリーフ公式サイトへ" width="100" height="27" class="banner"></a>
+</div>
+<!--/footer-->
+</div>
+</footer>
+
+<form name="formx" method="post" action="index.php">
+<input type="hidden" name="op" value="">
+</form>
+
+</body>
+</html>
+
+</div>
