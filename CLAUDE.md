@@ -10,7 +10,10 @@
 - 確認済み: GitHub Actions からサイトへ疎通OK（WAFに弾かれず）、LINE 実送信OK（10/14 を一時追加してテスト、その後削除）。
 - **問題（2026-10-12 確認）: GitHub の schedule が大幅に間引かれている。** 10/11 16:43〜10/12 13:00 の約20時間で定期実行は5回のみ
   （JST 23:21, 04:05, 04:29, 08:37, 09:29。間隔 23分〜6.6時間）。実行自体は全て成功。10分間隔の想定を満たさない。
-  → 対策候補: 外部から10分ごとに workflow_dispatch API を叩く（Google Apps Script の時間トリガー or cron-job.org、要 fine-grained PAT）。ユーザーの選択待ち。
+  → **対策済み（2026-10-12）: Google Apps Script の時間トリガー（10分おき）から workflow_dispatch API で起動。** スクリプトは `tools/trigger.gs`
+  （ユーザーの Google アカウント上で稼働、トークンはスクリプト プロパティ `GITHUB_TOKEN`、fine-grained PAT・Actions RW・このリポジトリのみ）。
+  14:32〜20:42 の38回が毎回 xx:x2:56 に起動・全成功・1回約10秒で、10分間隔を確認。GitHub の schedule は予備として残置（重複しても二重通知なし）。
+  深夜0〜6時の1時間間隔（スクリプト側で制御）は未確認。PAT の有効期限切れに注意。
 - 未確認: コマ時刻の実サイトとの突き合わせ。
 - 運用メモ: Actions が state.json を自動コミットするので、ローカルから push する前に必ず `git pull --rebase`。
   コミット作者はリポジトリローカル設定で `Yuya-Uchiyama88@users.noreply.github.com`（メール非公開のため）。
