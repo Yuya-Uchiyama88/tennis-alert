@@ -8,7 +8,10 @@
 ## 状況
 - フェーズ: **本番稼働中**（2026-10-11 開始）。リポジトリ: https://github.com/Yuya-Uchiyama88/tennis-alert （public）
 - 確認済み: GitHub Actions からサイトへ疎通OK（WAFに弾かれず）、LINE 実送信OK（10/14 を一時追加してテスト、その後削除）。
-- 未確認: schedule（定期実行）が実際に10分間隔で動くか・遅延の程度、コマ時刻の実サイトとの突き合わせ。
+- **問題（2026-10-12 確認）: GitHub の schedule が大幅に間引かれている。** 10/11 16:43〜10/12 13:00 の約20時間で定期実行は5回のみ
+  （JST 23:21, 04:05, 04:29, 08:37, 09:29。間隔 23分〜6.6時間）。実行自体は全て成功。10分間隔の想定を満たさない。
+  → 対策候補: 外部から10分ごとに workflow_dispatch API を叩く（Google Apps Script の時間トリガー or cron-job.org、要 fine-grained PAT）。ユーザーの選択待ち。
+- 未確認: コマ時刻の実サイトとの突き合わせ。
 - 運用メモ: Actions が state.json を自動コミットするので、ローカルから push する前に必ず `git pull --rebase`。
   コミット作者はリポジトリローカル設定で `Yuya-Uchiyama88@users.noreply.github.com`（メール非公開のため）。
   `gh` CLI なし。実行状況は公開APIで確認可: `curl https://api.github.com/repos/Yuya-Uchiyama88/tennis-alert/actions/runs`
