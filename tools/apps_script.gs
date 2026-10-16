@@ -47,7 +47,7 @@ function dispatchWatch() {
 function github(method, path, payload) {
   const res = UrlFetchApp.fetch('https://api.github.com/repos/' + REPO + path, {
     method: method,
-    headers: { Authorization: 'Bearer ' + prop('GITHUB_TOKEN'), Accept: 'application/vnd.github+json' },
+    headers: { Authorization: 'Bearer ' + prop('GITHUB_TOKEN').trim(), Accept: 'application/vnd.github+json' },
     contentType: 'application/json',
     payload: payload ? JSON.stringify(payload) : undefined,
     muteHttpExceptions: true,
@@ -65,11 +65,18 @@ function github(method, path, payload) {
 // ---- LINE Webhook ----
 
 function doPost(e) {
+  console.log('Webhook 受信');
   const events = JSON.parse(e.postData.contents).events || [];
   const owner = prop('LINE_USER_ID');
   events.forEach(function (ev) {
     if (ev.type !== 'message' || ev.message.type !== 'text') return;
-    if (!ev.source || ev.source.userId !== owner) return; // 本人以外は無視
+    if (!ev.source || ev.source.userId !== owner.trim()) {
+      // 本人以外は無視する。LINE_USER_ID の設定ミスを見つけられるよう末尾4文字だけ記録する
+      console.warn('LINE_USER_ID と一致しない送信者を無視しました: ...' + String(ev.source && ev.source.userId).slice(-4) +
+        ' (設定値の末尾: ...' + owner.trim().slice(-4) + ')');
+      return;
+    }
+    console.log('コマンド受信: ' + ev.message.text);
     let reply;
     try {
       reply = handleCommand(ev.message.text);
@@ -82,13 +89,16 @@ function doPost(e) {
 }
 
 function replyLine(replyToken, text) {
-  UrlFetchApp.fetch('https://api.line.me/v2/bot/message/reply', {
+  const res = UrlFetchApp.fetch('https://api.line.me/v2/bot/message/reply', {
     method: 'post',
-    headers: { Authorization: 'Bearer ' + prop('LINE_CHANNEL_ACCESS_TOKEN') },
+    headers: { Authorization: 'Bearer ' + prop('LINE_CHANNEL_ACCESS_TOKEN').trim() },
     contentType: 'application/json',
     payload: JSON.stringify({ replyToken: replyToken, messages: [{ type: 'text', text: text }] }),
     muteHttpExceptions: true,
   });
+  if (res.getResponseCode() !== 200) {
+    console.error('LINE への返信に失敗しました: ' + res.getResponseCode() + ' ' + res.getContentText());
+  }
 }
 
 function handleCommand(text) {
