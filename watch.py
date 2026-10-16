@@ -163,7 +163,6 @@ def main() -> int:
     dates = load_dates(today)
     if not dates:
         print("監視対象の日付がありません (config.toml の dates を確認してください)")
-        return 0
 
     curr_open: dict[str, list[str]] = {}
     new_by_day: dict[str, list[str]] = {}

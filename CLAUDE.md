@@ -10,7 +10,7 @@
 - 確認済み: GitHub Actions からサイトへ疎通OK（WAFに弾かれず）、LINE 実送信OK（10/14 を一時追加してテスト、その後削除）。
 - **問題（2026-10-12 確認）: GitHub の schedule が大幅に間引かれている。** 10/11 16:43〜10/12 13:00 の約20時間で定期実行は5回のみ
   （JST 23:21, 04:05, 04:29, 08:37, 09:29。間隔 23分〜6.6時間）。実行自体は全て成功。10分間隔の想定を満たさない。
-  → **対策済み（2026-10-12）: Google Apps Script の時間トリガー（10分おき）から workflow_dispatch API で起動。** スクリプトは `tools/trigger.gs`
+  → **対策済み（2026-10-12）: Google Apps Script の時間トリガー（10分おき）から workflow_dispatch API で起動。** スクリプトは `tools/apps_script.gs`（旧 trigger.gs）
   （ユーザーの Google アカウント上で稼働、トークンはスクリプト プロパティ `GITHUB_TOKEN`、fine-grained PAT・Actions RW・このリポジトリのみ）。
   14:32〜20:42 の38回が毎回 xx:x2:56 に起動・全成功・1回約10秒で、10分間隔を確認。GitHub の schedule は予備として残置（重複しても二重通知なし）。
   深夜0〜6時の1時間間隔（スクリプト側で制御）は未確認。PAT の有効期限切れに注意。
@@ -91,7 +91,9 @@ README.md                    # 日付変更手順、LINE / GitHub セットア�
 3. Actions で手動実行し、**WAF に弾かれないか**と LINE 着信を確認 → 数日運用して遅延・通知数を確認。
 4. WAF で弾かれたら代替基盤（Cloudflare Workers Cron 等）を検討。
 
-## 検討中: LINE チャットからの日付設定・監視終了（2026-10-16 プラン提示、未着手）
+## LINE チャットからの日付設定・監視終了（2026-10-16 実装済み・ユーザーのセットアップ待ち）
+- コード: `tools/apps_script.gs`（旧 `tools/trigger.gs` を統合・置換）。日付パースはブラウザJSで検証済み、GAS 上では未検証。
+- 決定: `終了` = 全監視日を外す。追加コマンド（期間指定など）は無し。
 - Webhook 受け口: 既存の Google Apps Script を「ウェブアプリ」としてデプロイし doPost で受ける（無料・常時稼働）。
 - 保存先: GAS が GitHub Contents API で config.toml を更新・コミット（唯一の正本を維持。PAT に Contents: RW 追加が必要）。
 - 返信: reply API（無料通数にカウントされない）。変更後は workflow_dispatch で即時チェック。
