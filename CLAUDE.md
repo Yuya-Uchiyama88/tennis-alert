@@ -90,3 +90,13 @@ README.md                    # 日付変更手順、LINE / GitHub セットア�
 2. git init → public リポジトリへ push → Secrets 登録。
 3. Actions で手動実行し、**WAF に弾かれないか**と LINE 着信を確認 → 数日運用して遅延・通知数を確認。
 4. WAF で弾かれたら代替基盤（Cloudflare Workers Cron 等）を検討。
+
+## 検討中: LINE チャットからの日付設定・監視終了（2026-10-16 プラン提示、未着手）
+- Webhook 受け口: 既存の Google Apps Script を「ウェブアプリ」としてデプロイし doPost で受ける（無料・常時稼働）。
+- 保存先: GAS が GitHub Contents API で config.toml を更新・コミット（唯一の正本を維持。PAT に Contents: RW 追加が必要）。
+- 返信: reply API（無料通数にカウントされない）。変更後は workflow_dispatch で即時チェック。
+- コマンド案: 追加 / 削除 / 一覧 / 終了(全日付クリア) / ヘルプ。日付は M/D・YYYY-MM-DD 等、年省略時は直近の未来日。
+- 制約: GAS の doPost はリクエストヘッダを読めず X-Line-Signature 検証不可 → 送信者 userId が本人か照合で代替（URL秘匿前提）。
+  より厳密にするなら Cloudflare Workers（署名検証可、要新規アカウント）。
+- 併せて必要な修正: workflow の state.json push 前に `git pull --rebase`（config.toml の同時コミットで push 失敗するため）。
+- LINE 側: Webhook URL 設定・Webhook 利用 ON、公式アカウントの自動応答メッセージ OFF。
