@@ -13,7 +13,9 @@
   → **対策済み（2026-10-12）: Google Apps Script の時間トリガー（10分おき）から workflow_dispatch API で起動。** スクリプトは `tools/apps_script.gs`（旧 trigger.gs）
   （ユーザーの Google アカウント上で稼働、トークンはスクリプト プロパティ `GITHUB_TOKEN`、fine-grained PAT・Actions RW・このリポジトリのみ）。
   14:32〜20:42 の38回が毎回 xx:x2:56 に起動・全成功・1回約10秒で、10分間隔を確認。GitHub の schedule は予備として残置（重複しても二重通知なし）。
-  深夜0〜6時の1時間間隔（スクリプト側で制御）は未確認。PAT の有効期限切れに注意。
+  10/16 09:02〜10/23 18:22 の dispatch 856回が全成功、日中15分超の空白なし、深夜は毎時 xx:02 の1回で1時間間隔も確認済み。PAT の有効期限切れに注意。
+  10/19 01:42 に GAS から「We're sorry, a server error occurred」の失敗メール1件 → Google 側の一時障害（その時刻は早期 return する回で GitHub 呼び出し前）。影響なし・対応不要。
+- **10/16 の `終了` テスト以降 dates = [] のまま（10/25 未監視）。10/23 にユーザーへ `追加 10/25` を依頼。**
 - 未確認: コマ時刻の実サイトとの突き合わせ。
 - 運用メモ: Actions が state.json を自動コミットするので、ローカルから push する前に必ず `git pull --rebase`。
   コミット作者はリポジトリローカル設定で `Yuya-Uchiyama88@users.noreply.github.com`（メール非公開のため）。
